@@ -1,0 +1,949 @@
+{
+    "https_protocol_checker": {
+        "http.badssl.com": {
+            "protocol": "http",
+            "description": "Not secure connection"
+        },
+        "https://expired.badssl.com/": {
+            "protocol": "http",
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1129)"
+        },
+        "https://wrong.host.badssl.com/": {
+            "protocol": "http",
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'wrong.host.badssl.com'. (_ssl.c:1129)"
+        },
+        "https://self-signed.badssl.com/": {
+            "protocol": "http",
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)"
+        },
+        "https://untrusted-root.badssl.com/": {
+            "protocol": "http",
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1129)"
+        },
+        "www.google.com": {
+            "protocol": "https",
+            "description": "Secure connection"
+        },
+        "www.facebook.com": {
+            "protocol": "http",
+            "description": "Not secure connection"
+        }
+    },
+    "vulnerability_checker": {
+        "ipVulnerabilities": {
+            "192.168.1.14": {
+                "80": {
+                    "protocol": "tcp",
+                    "service": {
+                        "name": "http",
+                        "product": "Apache httpd",
+                        "version": "2.4.25"
+                    },
+                    "vulnerabilities": {
+                        "CVE-2019-9517": {
+                            "type": "cve",
+                            "cvss": "7.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00345,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2023-25690": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.06436,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-31813": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.01138,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-23943": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.76259,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-22720": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00371,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2021-44790": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.24713,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2021-39275": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.02376,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2021-26691": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.94539,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-7679": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00516,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-3169": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.01208,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-3167": {
+                            "type": "cve",
+                            "cvss": "7.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.01001,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-0211": {
+                            "type": "cve",
+                            "cvss": "7.2",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1+",
+                                "epss": 0.97393,
+                                "cvss_baseScore": 7.8,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "TRUE"
+                            }
+                        },
+                        "CVE-2021-40438": {
+                            "type": "cve",
+                            "cvss": "6.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1+",
+                                "epss": 0.9754,
+                                "cvss_baseScore": 9,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "TRUE"
+                            }
+                        },
+                        "CVE-2020-35452": {
+                            "type": "cve",
+                            "cvss": "6.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00528,
+                                "cvss_baseScore": 7.3,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-1312": {
+                            "type": "cve",
+                            "cvss": "6.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.0133,
+                                "cvss_baseScore": 9.8,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-15715": {
+                            "type": "cve",
+                            "cvss": "6.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.97068,
+                                "cvss_baseScore": 8.1,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-28615": {
+                            "type": "cve",
+                            "cvss": "6.4",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.01785,
+                                "cvss_baseScore": 9.1,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2021-44224": {
+                            "type": "cve",
+                            "cvss": "6.4",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.79413,
+                                "cvss_baseScore": 8.2,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-10082": {
+                            "type": "cve",
+                            "cvss": "6.4",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00283,
+                                "cvss_baseScore": 9.1,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-9788": {
+                            "type": "cve",
+                            "cvss": "6.4",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.89317,
+                                "cvss_baseScore": 9.1,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-0217": {
+                            "type": "cve",
+                            "cvss": "6.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00196,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-22721": {
+                            "type": "cve",
+                            "cvss": "5.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00438,
+                                "cvss_baseScore": 9.1,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2020-1927": {
+                            "type": "cve",
+                            "cvss": "5.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00138,
+                                "cvss_baseScore": 6.1,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-10098": {
+                            "type": "cve",
+                            "cvss": "5.8",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.07268,
+                                "cvss_baseScore": 6.1,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-36760": {
+                            "type": "cve",
+                            "cvss": "5.1",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.01295,
+                                "cvss_baseScore": 9,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "CRITICAL",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-37436": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00044,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-30556": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00209,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-29404": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.02832,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-28614": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00155,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-26377": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.01138,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2022-22719": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.45357,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2021-34798": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.01217,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2021-33193": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00211,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2021-26690": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.93865,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2020-9490": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.09374,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2020-1934": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00117,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-17567": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00073,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-10081": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00664,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-0220": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00521,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-0196": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00713,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-17199": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00176,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-17189": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.0041,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-1333": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.11867,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-1303": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.96956,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-9798": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.9742,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-7668": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.96797,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-7659": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 1",
+                                "epss": 0.92546,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2017-15710": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.03099,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2006-20001": {
+                            "type": "cve",
+                            "cvss": "5.0",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00044,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2020-11993": {
+                            "type": "cve",
+                            "cvss": "4.3",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00412,
+                                "cvss_baseScore": 7.5,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "HIGH",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2019-10092": {
+                            "type": "cve",
+                            "cvss": "4.3",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 2",
+                                "epss": 0.00905,
+                                "cvss_baseScore": 6.1,
+                                "cvss_version": "CVSS 3.1",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-1302": {
+                            "type": "cve",
+                            "cvss": "4.3",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.02906,
+                                "cvss_baseScore": 5.9,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-1301": {
+                            "type": "cve",
+                            "cvss": "4.3",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00932,
+                                "cvss_baseScore": 5.9,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-11763": {
+                            "type": "cve",
+                            "cvss": "4.3",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.012,
+                                "cvss_baseScore": 5.9,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        },
+                        "CVE-2018-1283": {
+                            "type": "cve",
+                            "cvss": "3.5",
+                            "is_exploit": "false",
+                            "priority_details": {
+                                "priority": "Priority 4",
+                                "epss": 0.00175,
+                                "cvss_baseScore": 5.3,
+                                "cvss_version": "CVSS 3.0",
+                                "cvss_severity": "MEDIUM",
+                                "cisa_kev": "FALSE"
+                            }
+                        }
+                    }
+                },
+                "3000": {
+                    "protocol": "tcp",
+                    "service": {
+                        "name": "ppp",
+                        "product": "Unknown",
+                        "version": "Unknown"
+                    },
+                    "vulnerabilities": {}
+                }
+            }
+        },
+        "technologyVulnerabilities": [
+            {
+                "product": "Excel",
+                "version": "2019",
+                "vendor": "Microsoft",
+                "vulnerabilities": {
+                    "CVE-2020-0759": {
+                        "priority": "Priority 2",
+                        "epss": 0.04524,
+                        "cvss_baseScore": 8.8,
+                        "cvss_version": "CVSS 3.1",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2019-1327": {
+                        "priority": "Priority 2",
+                        "epss": 0.03799,
+                        "cvss_baseScore": 8.8,
+                        "cvss_version": "CVSS 3.1",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2020-0650": {
+                        "priority": "Priority 2",
+                        "epss": 0.01117,
+                        "cvss_baseScore": 7.8,
+                        "cvss_version": "CVSS 3.1",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2020-17123": {
+                        "priority": "Priority 2",
+                        "epss": 0.03022,
+                        "cvss_baseScore": 7.8,
+                        "cvss_version": "CVSS 3.1",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2019-0828": {
+                        "priority": "Priority 2",
+                        "epss": 0.01492,
+                        "cvss_baseScore": 7.8,
+                        "cvss_version": "CVSS 3.0",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2020-0651": {
+                        "priority": "Priority 2",
+                        "epss": 0.01117,
+                        "cvss_baseScore": 7.8,
+                        "cvss_version": "CVSS 3.1",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2019-1263": {
+                        "priority": "Priority 4",
+                        "epss": 0.00443,
+                        "cvss_baseScore": 5.5,
+                        "cvss_version": "CVSS 3.1",
+                        "cvss_severity": "MEDIUM",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2018-8636": {
+                        "priority": "Priority 2",
+                        "epss": 0.04978,
+                        "cvss_baseScore": 7.8,
+                        "cvss_version": "CVSS 3.0",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    },
+                    "CVE-2020-0652": {
+                        "priority": "Priority 2",
+                        "epss": 0.011,
+                        "cvss_baseScore": 7.8,
+                        "cvss_version": "CVSS 3.1",
+                        "cvss_severity": "HIGH",
+                        "cisa_kev": "FALSE"
+                    }
+                }
+            }
+        ]
+    },
+    "unauthorized_access_checker": {
+        "pingCheck": {
+            "192.168.1.14": {
+                "connection_established": "True",
+                "description": "Reachable with delay: 0.0004417896270751953 ms"
+            }
+        },
+        "portScan": {
+            "192.168.1.14": [
+                {
+                    "protocol": "tcp",
+                    "portid": "21",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "ftp",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "22",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "ssh",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "23",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "telnet",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "25",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "smtp",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "80",
+                    "state": "open",
+                    "reason": "syn-ack",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "http",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "443",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "https",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                }
+            ]
+        }
+    }
+}

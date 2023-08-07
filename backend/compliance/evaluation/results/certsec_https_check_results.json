@@ -1,0 +1,122 @@
+{
+    "google.com": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "a-msedge.net": {
+        "protocol": "undefined",
+        "error": "The website could not be resolved"
+    },
+    "youtube.com": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "facebook.com": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "microsoft.com": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "amazonaws.com": {
+        "protocol": "undefined",
+        "error": "The host is refusing the connection"
+    },
+    "twitter.com": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "gtld-servers.net": {
+        "protocol": "undefined",
+        "error": "The website could not be resolved"
+    },
+    "baidu.com": {
+        "protocol": "http",
+        "description": "Not secure connection"
+    },
+    "instagram.com": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "seedmm.co": {
+        "protocol": "http",
+        "description": "Not secure connection"
+    },
+    "netsolmobitest.cf": {
+        "protocol": "undefined",
+        "error": "The website could not be resolved"
+    },
+    "quick.net.pl": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "dhsdirect.com": {
+        "protocol": "undefined",
+        "error": "The operation has timed out, possibly due to network issues or the server being unavailable"
+    },
+    "seedstory.com.hk": {
+        "protocol": "https",
+        "error": "Certificate verification failed: Hostname mismatch, certificate is not valid for 'seedstory.com.hk'"
+    },
+    "boavistanet.net.br": {
+        "protocol": "https",
+        "error": "Certificate verification failed: Hostname mismatch, certificate is not valid for 'boavistanet.net.br'"
+    },
+    "europass-info.de": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "theck.es": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "hayat.com": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "redsalud.gob.cl": {
+        "protocol": "undefined",
+        "error": "The operation has timed out, possibly due to network issues or the server being unavailable"
+    },
+    "https://expired.badssl.com/": {
+        "protocol": "https",
+        "error": "Certificate verification failed: The certificate has expired"
+    },
+    "https://wrong.host.badssl.com/": {
+        "protocol": "https",
+        "error": "Certificate verification failed: Hostname mismatch, certificate is not valid for 'wrong.host.badssl.com'"
+    },
+    "https://self-signed.badssl.com/": {
+        "protocol": "https",
+        "error": "Certificate verification failed: Self signed certificate"
+    },
+    "https://untrusted-root.badssl.com/": {
+        "protocol": "https",
+        "error": "Certificate verification failed: There is a self-signed certificate in the certificate chain"
+    },
+    "https://revoked.badssl.com/": {
+        "protocol": "https",
+        "error": "Certificate verification failed: The certificate has expired"
+    },
+    "https://pinning-test.badssl.com/": {
+        "protocol": "https",
+        "description": "Secure connection"
+    },
+    "http://http.badssl.com/": {
+        "protocol": "http",
+        "description": "Not secure connection"
+    },
+    "http://http-textarea.badssl.com/": {
+        "protocol": "http",
+        "description": "Not secure connection"
+    },
+    "http://http-password.badssl.com/": {
+        "protocol": "http",
+        "description": "Not secure connection"
+    },
+    "http://http-credit-card.badssl.com/": {
+        "protocol": "http",
+        "description": "Not secure connection"
+    }
+}

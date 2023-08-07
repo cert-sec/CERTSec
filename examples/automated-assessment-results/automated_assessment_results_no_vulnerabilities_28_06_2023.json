@@ -1,0 +1,127 @@
+{
+    "https_protocol_checker": {
+        "www.google.com": {
+            "protocol": "https",
+            "description": "Secure connection"
+        }
+    },
+    "vulnerability_checker": {
+        "ipVulnerabilities": {
+            "192.168.1.14": {
+                "3000": {
+                    "protocol": "tcp",
+                    "service": {
+                        "name": "ppp",
+                        "product": "Unknown",
+                        "version": "Unknown"
+                    },
+                    "vulnerabilities": {}
+                }
+            }
+        },
+        "technologyVulnerabilities": [
+            {
+                "product": "Excel",
+                "version": "2020",
+                "vendor": "Microsoft",
+                "vulnerabilities": {}
+            }
+        ]
+    },
+    "unauthorized_access_checker": {
+        "pingCheck": {
+            "192.168.1.14": {
+                "connection_established": "True",
+                "description": "Reachable with delay: 0.00032210350036621094 ms"
+            }
+        },
+        "portScan": {
+            "192.168.1.14": [
+                {
+                    "protocol": "tcp",
+                    "portid": "21",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "ftp",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "22",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "ssh",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "23",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "telnet",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "25",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "smtp",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "80",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "http",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                },
+                {
+                    "protocol": "tcp",
+                    "portid": "443",
+                    "state": "closed",
+                    "reason": "conn-refused",
+                    "reason_ttl": "0",
+                    "service": {
+                        "name": "https",
+                        "method": "table",
+                        "conf": "3"
+                    },
+                    "cpe": [],
+                    "scripts": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,5 @@
+setuptools
+requests
+python-dotenv
+termcolor
+urllib3==1.26.6

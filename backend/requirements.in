@@ -1,0 +1,21 @@
+django
+djangorestframework
+django-cors-headers
+ping3
+python3-nmap
+celery[redis]
+python-dateutil
+httpx
+python-dotenv
+xhtml2pdf
+matplotlib
+seaborn
+numpy
+psutil
+pandas
+
+openai
+
+black
+
+-r cve_prioritizer/cve_prioritizer/requirements.txt
